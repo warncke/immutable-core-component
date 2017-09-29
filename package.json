@@ -3,7 +3,8 @@
   "dependencies": {
     "immutable-core": "2.2.5",
     "immutable-error": "0.1.1",
-    "immutable-global": "0.1.0"
+    "immutable-global": "0.1.0",
+    "immutable-require-valid-optional-object": "0.1.14"
   },
   "description": "Dynamic UI components for Immutable App",
   "devDependencies": {
