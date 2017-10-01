@@ -45,7 +45,7 @@ describe('immutable-core-component-instance toString', function () {
         // create new component instance
         var instance = await component.new({session: {}})
         // check that render includes template
-        assert.match(instance.toString(), '<div id="foo">Hello bar</div>')
+        assert.match(instance.toString(), '<div id="foo" class="immutable-app-component-foo">Hello bar</div>')
     })
 
     it('should render template with partial', async function () {
@@ -58,7 +58,7 @@ describe('immutable-core-component-instance toString', function () {
         // create new component instance
         var instance = await component.new({session: {}})
         // check that render includes template
-        assert.match(instance.toString(), '<div id="foo">Hello bar bam</div>')
+        assert.match(instance.toString(), '<div id="foo" class="immutable-app-component-foo">Hello bar bam</div>')
     })
 
     it('should render template with helper', async function () {
@@ -71,7 +71,7 @@ describe('immutable-core-component-instance toString', function () {
         // create new component instance
         var instance = await component.new({session: {}})
         // check that render includes template
-        assert.match(instance.toString(), '<div id="foo">Hello bar bam</div>')
+        assert.match(instance.toString(), '<div id="foo" class="immutable-app-component-foo">Hello bar bam</div>')
     })
 
     it('should set default refreshInterval', async function () {
