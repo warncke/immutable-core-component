@@ -209,10 +209,10 @@ describe('immutable-core-component-instance toString', function () {
         assert.match(instance.toString(), `<style>.foo {font-size: 1px}</style>`)
     })
 
-    it('should set script', async function () {
+    it('should set js', async function () {
         // create new component
         var component = new ImmutableCoreComponent({
-            script: 'alert("foo")',
+            js: 'alert("foo")',
             name: 'foo',
         })
         // create new instance
