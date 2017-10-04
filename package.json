@@ -6,7 +6,7 @@
     "immutable-core": "2.2.9",
     "immutable-error": "0.1.2",
     "immutable-global": "0.1.2",
-    "immutable-require-valid-optional-object": "0.1.14"
+    "immutable-require-valid-optional-object": "0.1.15"
   },
   "description": "Dynamic UI components for Immutable App",
   "devDependencies": {
@@ -28,5 +28,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "version": "0.0.9"
+  "version": "0.0.10"
 }
