@@ -48,6 +48,22 @@ describe('immutable-core-component-instance toString', function () {
         assert.match(instance.toString(), '<div id="foo" class="immutable-app-component-foo">Hello bar</div>')
     })
 
+    it('should render template with placeholder', async function () {
+        var component = new ImmutableCoreComponent({
+            client: {
+                placeholders: {
+                    foo: 'bar',
+                },
+            },
+            name: 'foo',
+            template: 'Hello {{foo}}',
+        })
+        // create new component instance
+        var instance = await component.new({session: {}})
+        // check that render includes template
+        assert.match(instance.toString(), '<div id="foo" class="immutable-app-component-foo">Hello bar</div>')
+    })
+
     it('should render template with partial', async function () {
         var component = new ImmutableCoreComponent({
             name: 'foo',
