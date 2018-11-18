@@ -26,7 +26,7 @@ describe('immutable-core-component-instance toString', function () {
         ImmutableCore.reset()
         ImmutableCoreComponent.reset()
         // create sinon sandbox
-        sandbox = sinon.sandbox.create()
+        sandbox = sinon.createSandbox()
         // create stub for new method
         newStub = sandbox.stub().resolves({data: {foo: 'bar'}})
     })

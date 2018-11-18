@@ -1,0 +1,97 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 5d3ec33..ceca8ba 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -85,5 +85,5 @@[m [mWhen using Immutable App Component:[m
+ | css       | string    | css to include on page - will be wrapped in <style>  |[m
+ | helpers   | object    | map of handlebars helper names and functions         |[m
+ | js        | string    | js to include - will be wrapped in anonymous function|[m
+[31m-| partials  | object    | map of hadlebars partials names and template strings |[m
+[32m+[m[32m| partials  | object    | map of handlebars partials names and template strings|[m
+ | template  | string    | main handlebars template string                      |[m
+\ No newline at end of file[m
+[1mdiff --git a/lib/immutable-core-component.js b/lib/immutable-core-component.js[m
+[1mindex 94a6296..416d222 100644[m
+[1m--- a/lib/immutable-core-component.js[m
+[1m+++ b/lib/immutable-core-component.js[m
+[36m@@ -163,15 +163,6 @@[m [mfunction global () {[m
+     return immutableGlobal.data[m
+ }[m
+ [m
+[31m-/**[m
+[31m- * @function reset[m
+[31m- *[m
+[31m- * reset global data[m
+[31m- */[m
+[31m-function reset () {[m
+[31m-    immutableGlobal.reset()[m
+[31m-}[m
+[31m-[m
+ /**[m
+  * @function _new[m
+  *[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex e1a9dd3..5ecf3fa 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -1,19 +1,19 @@[m
+ {[m
+   "author": "Ersun Warncke <ersun.warncke@gmail.com>",[m
+   "dependencies": {[m
+[31m-    "handlebars": "4.0.11",[m
+[31m-    "immutable-ai": "0.8.1",[m
+[31m-    "immutable-core": "2.2.38",[m
+[31m-    "immutable-error": "0.1.4",[m
+[31m-    "immutable-global": "0.2.2",[m
+[32m+[m[32m    "handlebars": "4.0.12",[m
+[32m+[m[32m    "immutable-ai": "0.8.3",[m
+[32m+[m[32m    "immutable-core": "2.3.2",[m
+[32m+[m[32m    "immutable-error": "0.1.5",[m
+[32m+[m[32m    "immutable-global": "0.2.3",[m
+     "immutable-require-valid-optional-object": "0.1.17"[m
+   },[m
+   "description": "Dynamic UI components for Immutable App",[m
+   "devDependencies": {[m
+[31m-    "chai": "4.1.2",[m
+[32m+[m[32m    "chai": "4.2.0",[m
+     "chai-as-promised": "7.1.1",[m
+[31m-    "mocha": "4.1.0",[m
+[31m-    "sinon": "4.1.5"[m
+[32m+[m[32m    "mocha": "5.2.0",[m
+[32m+[m[32m    "sinon": "7.1.1"[m
+   },[m
+   "directories": {[m
+     "test": "test"[m
+[36m@@ -29,4 +29,4 @@[m
+     "test": "mocha"[m
+   },[m
+   "version": "0.0.43"[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[1mdiff --git a/test/immutable-core-component.js b/test/immutable-core-component.js[m
+[1mindex 3731fac..8675752 100644[m
+[1m--- a/test/immutable-core-component.js[m
+[1m+++ b/test/immutable-core-component.js[m
+[36m@@ -23,7 +23,7 @@[m [mdescribe('immutable-core-component', function () {[m
+         ImmutableCore.reset()[m
+         ImmutableCoreComponent.reset()[m
+         // create sinon sandbox[m
+[31m-        sandbox = sinon.sandbox.create()[m
+[32m+[m[32m        sandbox = sinon.createSandbox()[m
+     })[m
+ [m
+     afterEach(function () {[m
+[1mdiff --git a/test/to-string.js b/test/to-string.js[m
+[1mindex b595b45..5efc07c 100644[m
+[1m--- a/test/to-string.js[m
+[1m+++ b/test/to-string.js[m
+[36m@@ -26,7 +26,7 @@[m [mdescribe('immutable-core-component-instance toString', function () {[m
+         ImmutableCore.reset()[m
+         ImmutableCoreComponent.reset()[m
+         // create sinon sandbox[m
+[31m-        sandbox = sinon.sandbox.create()[m
+[32m+[m[32m        sandbox = sinon.createSandbox()[m
+         // create stub for new method[m
+         newStub = sandbox.stub().resolves({data: {foo: 'bar'}})[m
+     })[m

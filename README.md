@@ -85,5 +85,5 @@ When using Immutable App Component:
 | css       | string    | css to include on page - will be wrapped in <style>  |
 | helpers   | object    | map of handlebars helper names and functions         |
 | js        | string    | js to include - will be wrapped in anonymous function|
-| partials  | object    | map of hadlebars partials names and template strings |
+| partials  | object    | map of handlebars partials names and template strings|
 | template  | string    | main handlebars template string                      |

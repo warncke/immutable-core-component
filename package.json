@@ -1,19 +1,19 @@
 {
   "author": "Ersun Warncke <ersun.warncke@gmail.com>",
   "dependencies": {
-    "handlebars": "4.0.11",
-    "immutable-ai": "0.8.1",
-    "immutable-core": "2.2.38",
-    "immutable-error": "0.1.4",
-    "immutable-global": "0.2.2",
+    "handlebars": "4.0.12",
+    "immutable-ai": "0.8.3",
+    "immutable-core": "2.3.2",
+    "immutable-error": "0.1.5",
+    "immutable-global": "0.2.3",
     "immutable-require-valid-optional-object": "0.1.17"
   },
   "description": "Dynamic UI components for Immutable App",
   "devDependencies": {
-    "chai": "4.1.2",
+    "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
-    "mocha": "4.1.0",
-    "sinon": "4.1.5"
+    "mocha": "5.2.0",
+    "sinon": "7.1.1"
   },
   "directories": {
     "test": "test"
@@ -28,5 +28,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "version": "0.0.43"
+  "version": "0.0.44"
 }

@@ -23,7 +23,7 @@ describe('immutable-core-component', function () {
         ImmutableCore.reset()
         ImmutableCoreComponent.reset()
         // create sinon sandbox
-        sandbox = sinon.sandbox.create()
+        sandbox = sinon.createSandbox()
     })
 
     afterEach(function () {
