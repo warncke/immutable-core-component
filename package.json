@@ -3,10 +3,10 @@
   "dependencies": {
     "handlebars": "4.0.12",
     "immutable-ai": "0.8.3",
-    "immutable-core": "2.3.2",
+    "immutable-core": "2.3.3",
     "immutable-error": "0.1.5",
     "immutable-global": "0.2.3",
-    "immutable-require-valid-optional-object": "0.1.17"
+    "immutable-require-valid-optional-object": "0.1.18"
   },
   "description": "Dynamic UI components for Immutable App",
   "devDependencies": {
@@ -28,5 +28,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "version": "0.0.44"
+  "version": "0.0.45"
 }
