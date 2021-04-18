@@ -198,7 +198,7 @@ describe('immutable-core-component-instance toString', function () {
         // create new instance
         var instance = await component.new({session: {}})
         // render
-        assert.match(instance.toString(), `component.partials['bar'] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function`)
+        assert.match(instance.toString(), `component.partials['bar'] = Handlebars.template({"compiler":[8,">= 4.3.0"],"main":function`)
     })
 
     it('should set template', async function () {
@@ -210,7 +210,7 @@ describe('immutable-core-component-instance toString', function () {
         // create new instance
         var instance = await component.new({session: {}})
         // render
-        assert.match(instance.toString(), `component.template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function`)
+        assert.match(instance.toString(), `component.template = Handlebars.template({"compiler":[8,">= 4.3.0"],"main":function`)
     })
 
     it('should set css', async function () {
